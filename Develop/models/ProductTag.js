@@ -11,6 +11,20 @@ ProductTag.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    product_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'product',
+        key: 'id',
+      },
+    },
+    tag_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'tag',
+        key: 'id',
+      },
+    },
   },
   {
     sequelize,
@@ -20,5 +34,7 @@ ProductTag.init(
     modelName: 'product_tag',
   }
 );
+
+
 
 module.exports = ProductTag;

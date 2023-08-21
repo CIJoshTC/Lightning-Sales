@@ -13,6 +13,7 @@ Tag.init(
     },
     tag_name: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
   },
   {
@@ -23,5 +24,12 @@ Tag.init(
     modelName: 'tag',
   }
 );
+
+// Define associations
+Tag.belongsToMany(Product, {
+  through: ProductTag,
+  foreignKey: 'tag_id',
+});
+
 
 module.exports = Tag;
