@@ -29,4 +29,5 @@ module.exports = {
   Category,
   Tag,
   ProductTag,
+  associateModels, 
 };
