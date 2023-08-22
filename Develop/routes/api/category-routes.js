@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Category, Product } = require('../../models');
 
-// The `/api/categories` endpoint
+
 
 router.get('/', async (req, res) => {
   try{
@@ -66,4 +66,4 @@ router.delete('/:id', async (req, res) => {
   
 });
 
-module.exports = router;
+module.exports = router; 
